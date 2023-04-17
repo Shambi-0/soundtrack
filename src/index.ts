@@ -40,7 +40,7 @@ export class Soundtrack {
     public Songs: Readonly<Sound[]> = [];
     public Playing = false;
     
-    private Active = 1;
+    private Active = 0;
     private Reference: SoundGroup;
     // private Transitioning = false;
 
@@ -76,7 +76,13 @@ export class Soundtrack {
         })
 
         Active.Volume = this.Reference.Volume;
-        (Active as any["Play" | "Resume"])[Active.IsPaused ? "Resume" : "Play"]();
+
+        if (Active.IsPaused) {
+            Active.Resume();
+
+        } else {
+            Active.Play();
+        };
 
         this.Playing = true;
 
