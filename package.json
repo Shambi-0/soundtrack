@@ -1,6 +1,6 @@
 {
   "name": "@rbxts/soundtrack",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "An Open-Source Soundtrack & SFX library for Roblox.",
   "main": "out/init.lua",
   "homepage": "https://github.com/Shambi-0/soundtrack/blob/main/README.md",
